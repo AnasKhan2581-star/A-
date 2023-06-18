@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I Love You Generator</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      #output {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      #generateButton {
+        background-color: #800000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>You are MINE</h1>
+    <div id="output"></div>
+    <div>Please maaf kardo pleaseeeeeee</div>
+    <br />
+    <button id="generateButton">Click me, cutu</button>
+
+    <script>
+      const outputDiv = document.getElementById("output");
+      const generateButton = document.getElementById("generateButton");
+
+      generateButton.addEventListener("click", generateLoveMessage);
+
+      function generateLoveMessage() {
+        const messages = [
+          "I love you, Cutu❤️",
+          "I love you, Jaan❤️",
+          "I love you, Life❤️",
+          "I love you, My everything❤️",
+        ];
+
+        const colors = ["red", "blue", "green", "purple"];
+        const fonts = ["Arial", "Verdana", "Courier", "Georgia"];
+
+        const randomMessage =
+          messages[Math.floor(Math.random() * messages.length)];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+
+        outputDiv.textContent = randomMessage;
+        outputDiv.style.color = randomColor;
+        outputDiv.style.fontFamily = randomFont;
+      }
+    </script>
+  </body>
+</html>
